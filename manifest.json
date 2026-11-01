@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Pin Tabs from Bookmarks",
+  "version": "1.0.0",
+  "description": "Closes all pinned tabs in the current window, then pins every URL from a chosen bookmarks folder.",
+  "permissions": ["bookmarks", "tabs", "storage"],
+  "action": {
+    "default_title": "Pin Tabs from Bookmarks",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "commands": {
+    "repin": {
+      "suggested_key": { "default": "Alt+Shift+P" },
+      "description": "Re-pin tabs from the saved bookmarks folder"
+    }
+  }
+}
